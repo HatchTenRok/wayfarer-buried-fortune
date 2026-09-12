@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="市区町村の中に眠る探索候補を地図で発見する静的Webアプリ">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>埋蔵量占い</title>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cyberjapandata.gsi.go.jp">
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=20260912-lite-1">
+  </head>
+  <body>
+    <div id="map" aria-label="日本地図"></div>
+
+    <button class="menu-button" id="menuButton" type="button" aria-label="カテゴリメニューを開く" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <aside class="side-panel" id="sidePanel" aria-label="カテゴリメニュー">
+      <div class="panel-head">
+        <p>表示カテゴリ</p>
+        <button class="icon-button" id="closeMenuButton" type="button" aria-label="カテゴリメニューを閉じる">×</button>
+      </div>
+      <div class="category-list" id="categoryList"></div>
+      <button class="help-link" id="helpButton" type="button">データの出典・ライセンス</button>
+    </aside>
+
+    <div class="bottom-bar">
+      <button class="primary-action" id="openSearchButton" type="button">街の名前を入力</button>
+    </div>
+
+    <dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
+      <form method="dialog" class="dialog-card">
+        <div class="dialog-head">
+          <h1 id="searchTitle">街の名前を入力</h1>
+          <button class="icon-button" value="cancel" type="submit" aria-label="閉じる">×</button>
+        </div>
+        <label class="search-field">
+          <span>市区町村名</span>
+          <input id="cityInput" type="search" autocomplete="off" placeholder="例: 印西市、千葉県 印西市">
+        </label>
+        <div class="suggestions" id="suggestions" role="listbox" aria-label="候補"></div>
+      </form>
+    </dialog>
+
+    <div class="ritual-overlay" id="ritualOverlay" aria-hidden="true">
+      <div class="mist mist-a"></div>
+      <div class="mist mist-b"></div>
+      <div class="mist mist-c"></div>
+      <div class="ritual-core">
+        <span>鑑定中</span>
+        <strong id="ritualCity">この街</strong>
+      </div>
+    </div>
+
+    <dialog class="result-dialog" id="resultDialog" aria-labelledby="resultTitle">
+      <form method="dialog" class="result-card">
+        <button class="icon-button result-close" value="close" type="submit" aria-label="閉じる">×</button>
+        <p class="eyebrow">探索候補の埋蔵量</p>
+        <h2 id="resultTitle">街の鑑定結果</h2>
+        <p class="rank-line" id="rankLine"></p>
+        <div class="count-grid" id="countGrid"></div>
+        <p class="story-text" id="storyText"></p>
+      </form>
+    </dialog>
+
+    <dialog class="help-dialog" id="helpDialog" aria-labelledby="helpTitle">
+      <form method="dialog" class="help-card">
+        <div class="dialog-head">
+          <h2 id="helpTitle">データの出典・ライセンスについて</h2>
+          <button class="icon-button" value="close" type="submit" aria-label="閉じる">×</button>
+        </div>
+        <div class="help-body">
+          <p>本アプリで表示する施設・区域・市区町村コメントは、国土交通省、文化庁、Japan Food Facilities、CODH / Geoshape 等が公開するデータをもとに、アプリ表示用に加工して作成しています。</p>
+
+          <h3>国土交通省 国土数値情報</h3>
+          <p>市町村役場等及び公的集会施設、自然公園地域、自然保全地域、伝統的建造物群保存地区、歴史的風致維持向上計画の重点地区、歴史的風土保存区域等を加工して作成しています。</p>
+          <p>出典: <a href="https://nlftp.mlit.go.jp/ksj/" target="_blank" rel="noreferrer">国土交通省 国土数値情報</a></p>
+          <p>ライセンス: 主に CC BY 4.0 に基づくデータを使用しています。一部データには非商用・再配布要確認のものが含まれます。</p>
+
+          <h3>市区町村の輪郭</h3>
+          <p>選択した市区町村の輪郭表示には、ESRIジャパン株式会社が無償配布する全国市区町村界データ（2020年版）をアプリ表示用に軽量化して使用しています。</p>
+          <p>出典・著作権: (c) Esri Japan。国土地理院の数値地図（国土基本情報）を加工・編集（承認番号 令元情使 第459-9号）。</p>
+
+          <h3>文化庁 国指定文化財等データベース</h3>
+          <p>文化財関連の情報は、文化庁「国指定文化財等データベース」の文字情報を、出典表示の上で加工して作成しています。</p>
+          <p>出典: <a href="https://kunishitei.bunka.go.jp/" target="_blank" rel="noreferrer">文化庁 国指定文化財等データベース</a></p>
+          <p>利用規約: <a href="https://kunishitei.bunka.go.jp/top/policy" target="_blank" rel="noreferrer">https://kunishitei.bunka.go.jp/top/policy</a></p>
+
+          <h3>Japan Food Facilities</h3>
+          <p>飲食店等の食品営業施設データは、Japan Food Facilities が統合・公開している食品営業許可・届出施設データを加工して作成しています。</p>
+          <p>出典: <a href="https://gl20percentclub.github.io/japan-food-facilities/" target="_blank" rel="noreferrer">Japan Food Facilities</a></p>
+          <p>元データの出典・ライセンス一覧: <a href="https://gl20percentclub.github.io/japan-food-facilities/attribution.html" target="_blank" rel="noreferrer">Japan Food Facilities attribution</a></p>
+          <p>元データごとに、公共データ利用規約、CC BY 4.0、CC BY 2.1 JP、CC0 1.0 等が含まれます。</p>
+
+          <h3>CODH / Geoshape</h3>
+          <p>市区町村ごとの歴史・風土コメントの作成には、CODH / Geoshape が公開する歴史系オープンデータを参考にしています。</p>
+          <p>使用した主なデータ: 『日本歴史地名大系』施設・地点項目データセット、『日本歴史地名大系』地名項目データセット、江戸近世村統合データセット、藩代表点データセット。</p>
+          <p>出典: <a href="https://codh.rois.ac.jp/" target="_blank" rel="noreferrer">ROIS-DS人文学オープンデータ共同利用センター（CODH）</a> / <a href="https://geoshape.ex.nii.ac.jp/" target="_blank" rel="noreferrer">Geoshapeリポジトリ</a></p>
+          <p>ライセンス: CC BY 4.0、CC BY-SA 4.0 等。</p>
+
+          <h3>加工について</h3>
+          <p>アプリ表示用のGeoJSON形式への変換、施設名・カテゴリ・住所・位置情報の整理、大手チェーン候補の除外、夜営業候補の除外、市区町村コードの付与、市区町村ごとの件数集計、市区町村ごとの歴史・風土コメント生成を行っています。</p>
+
+          <h3>注意事項</h3>
+          <p>本アプリの情報は、公開データを加工した参考情報です。掲載対象が現在も存在、営業、公開または利用可能であること、ならびに名称・所在地・位置・区域・指定状況が最新かつ正確であることは保証しません。</p>
+          <p>位置情報には、原典、作成時点、変換処理等に起因する誤差が含まれる場合があります。訪問、申請、掲載、審査等を行う場合は、必ず施設管理者、自治体、その他の公式情報を確認してください。</p>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="./app.js?v=20260912-lite-1"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+喫茶店・レストラン レイヤー データ作成履歴
+
+作成日時: 2026-09-01T06:35:36+00:00
+
+入力データ:
+- C:\WayfarerData\map-ready\publish\layers\cafe_restaurant_points_no_chains.csv
+- 元データは Japan Food Facilities の食品営業許可・届出施設データを加工したもの。
+
+前処理:
+- 同じ施設名が10件以上あるレコードを大手チェーン・多店舗運営候補として除外済み。
+- この夜営業除外処理は、そのチェーン除外後データに対して実施。
+
+夜営業候補の除外定義:
+- 店名または業種文字列に、スナック、キャバレー、キャバクラ、ガールズバー、ラウンジ、パブ、バー、ナイト、メンバーズ等を含むものを夜営業候補として除外。
+- スナック、キャバレー、キャバクラ、ガールズバー、ラウンジ、パブ、ナイト、メンバーズは強いNG語として扱う。
+- 例: 「スナック喫茶 みさ」のように、喫茶という語を含んでいても、スナックを含む場合は除外する。
+- バー / Bar は曖昧語のため、カフェ、喫茶、珈琲、コーヒー、レストラン、食堂、バーガー、ハンバーグ、サラダバー、ドリンクバー等を含む場合は誤除外を避ける。
+- クラブ単独はゴルフクラブ、クラブハウス、スポーツクラブ等の誤除外が多いため、今回の夜営業除外ルールからは外している。
+
+出力:
+- 夜営業候補除外後CSV: C:\WayfarerData\map-ready\publish\layers\cafe_restaurant_points_no_chains_no_nightlife.csv
+- 夜営業候補除外後GeoJSON: C:\WayfarerData\map-ready\publish\layers\cafe_restaurant_points_no_chains_no_nightlife.geojson
+- 除外した夜営業候補CSV: C:\WayfarerData\map-ready\publish\layers\cafe_restaurant_excluded_nightlife.csv
+
+件数:
+- 入力件数: 572,120
+- 除外件数: 23,578
+- 残存件数: 548,542
+- GeoJSON Feature数: 548,542
+
+除外理由別件数:
+- snack: 10,054
+- bar: 8,016
+- lounge: 2,705
+- cabaret: 1,357
+- pub: 977
+- night: 281
+- girls_bar: 132
+- members: 56
+
+注意:
+- この処理は店名・業種文字列に基づく推定除外であり、営業実態を保証するものではない。
+- 同名個人店や複合業態については誤除外・除外漏れが残る可能性がある。
+- アプリ公開時は Japan Food Facilities および元データの出典表示を行うこと。

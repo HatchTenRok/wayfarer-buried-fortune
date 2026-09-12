@@ -1,0 +1,101 @@
+市区町村別・歴史風土3行コメント CODH補強版 作成履歴
+======================================================
+
+作成日:
+  2026-09-01
+
+目的:
+  既存の市区町村別コメントが「社寺や地蔵」などの汎用表現に寄りすぎていたため、
+  CODH / Geoshape の歴史系オープンデータを追加し、領主・藩、城跡・陣屋、
+  旧村名、寺社、古墳、遺跡、史跡などの土地固有の文脈を3行コメントとして出力した。
+
+入力:
+  C:\WayfarerData\map-ready\publish\municipality_history_base.json
+  C:\WayfarerData\codh-history\downloads\nrct-poi-20250515.csv
+  C:\WayfarerData\codh-history\downloads\nrct-20250719.csv
+  C:\WayfarerData\codh-history\downloads\edo-village-20250917.csv
+  C:\WayfarerData\codh-history\downloads\han-point.html
+
+追加した主なデータ:
+  1. 『日本歴史地名大系』施設・地点項目データセット
+     - 寺院・神社、城跡・遺跡、古墳、貝塚、墓所・塚、窯跡、史跡・文化財など
+     - 2025年5月時点で32,038件
+     - ライセンス: CC BY 4.0
+     - クレジット例: 『日本歴史地名大系』施設・地点項目データセット（CODH作成） doi:10.20676/00000456
+
+  2. 『日本歴史地名大系』地名項目データセット
+     - 歴史地名、旧村名、読み、緯度経度、出典住所など
+     - 2025年5月時点で80,502件
+     - ライセンス: CC BY 4.0
+     - クレジット例: 『日本歴史地名大系』地名項目データセット（CODH作成） doi:10.20676/00000448
+
+  3. 江戸近世村統合データセット
+     - 日本歴史地名大系と幕末期近世村領域データセットの名寄せ済みデータ
+     - ライセンス: CC BY-SA 4.0
+     - クレジット例: 「江戸近世村統合データセット」（CODH作成）
+
+  4. 藩代表点（居城・陣屋）データセット
+     - 藩ごとの代表点として、居城、陣屋、藩庁などの地点を整理したデータ
+     - 『日本歴史地名大系』施設・地点項目データセットとリンク
+
+処理方法:
+  1. 既存の municipality_history_base.json を読み込み、市区町村コード順を維持した。
+  2. 各自治体の pref_code, pref, city から住所マッチャーを作成した。
+  3. CODHの施設・地点データは、住所と都道府県コードをもとに municipality_code へ紐付けた。
+  4. 住所だけで紐付けできない地点は、既存自治体代表座標への近傍判定で補助的に紐付けた。
+  5. 歴史地名データは、上位地名・出典住所をもとに municipality_code へ紐付けた。
+  6. 江戸近世村統合データは、日本歴史地名大系IDを介して municipality_code へ紐付けた。
+  7. 藩代表点は、HTML表から藩ID・藩名・代表点名・日本歴史地名大系ID・緯度経度を抽出し、
+     日本歴史地名大系IDまたは近傍判定で municipality_code へ紐付けた。
+  8. 各自治体について以下の3行を作成した。
+     - 1行目: 藩・居城/陣屋、近世村、歴史地名などの主な歴史フック
+     - 2行目: CODH由来の歴史POI分類と代表例
+     - 3行目: WaySpot候補として見るべき対象
+
+出力:
+  C:\WayfarerData\map-ready\publish\municipality_history_base_codh.json
+  C:\WayfarerData\map-ready\publish\municipality_history_comments_3line.json
+  C:\WayfarerData\map-ready\publish\municipality_history_comments_3line.csv
+
+自然文表示用の追加出力:
+  C:\WayfarerData\map-ready\publish\municipality_history_base_codh_natural.json
+  C:\WayfarerData\map-ready\publish\municipality_history_comments_natural.json
+  C:\WayfarerData\map-ready\publish\municipality_history_comments_natural.csv
+
+自然文表示用の追加処理:
+  - line1, line2, line3 は内部確認用として保持した。
+  - アプリ表示には display_comment を使う想定とした。
+  - display_comment は3要素を自然な一段落にまとめた文章で、
+    ラベル「土地の記憶」「探索テーマ」「WaySpot候補」は表示文から外した。
+  - 「新田」「用水」「堰」「溜池」「水路」「開墾」「水田」などが複数見える地域では、
+    土地改良碑や用水記念碑の可能性を補足した。
+  - 「川」「河」「堤」「橋」「渡」「河岸」などが複数見える地域では、
+    橋や川そのものを候補として扱わず、水辺の暮らしや堤防整備の歴史案内、
+    治水碑や河川改修碑の可能性として補足した。
+  - 藩代表点が紐付いた地域では、藩名にちなんだ領主碑や旧領境を示すしるべの可能性を補足した。
+  - 旧村名や歴史地名が取得できる地域では、可能な限り具体名を使い、
+    「○○村ゆかりの旧境石標や村の歴史案内板」のような表現にした。
+  - いずれも実在を断定せず、「可能性」「狙い目」として表現した。
+
+伝承補助データ:
+  - 印旛沼の竜伝承を folklore_supplements.json として追加した。
+  - 対象は千葉県栄町、印西市、匝瑳市。
+  - 栄町は龍角寺、印西市は龍腹寺、匝瑳市は龍尾寺に関わる伝承として反映した。
+  - 出典は Wikipedia「印旛沼の竜伝承」。
+  - 本文は丸写しせず、寺社縁起・伝承を探索文脈に短く要約した。
+
+件数:
+  市区町村コード: 1946件
+  紐付けできた施設・地点ID: 21081件
+  紐付けできた歴史地名ID: 29039件
+
+例:
+  千葉県栄町:
+    近世の記憶: 栄町周辺には安食村、酒直村、竜角寺村などの村名が見える。
+    歴史POI: 史跡・文化財・遺跡3件、埋葬・信仰・宗教施設2件、産業施設1件。例としてあじき台遺跡、埴生郡衙関連遺跡、龍角寺ニュータウン遺跡群に注目。
+    WaySpot候補: 史跡説明板、旧村名・字名の案内板を、既存ピンと照らして探したい。
+
+注意:
+  - 行政区域への紐付けは住所文字列と代表座標による推定を含む。
+  - コメントは説明可能性を優先し、AI APIは使用していない。
+  - 出典表示が必要なため、アプリ内またはデータ配布時にCODH/Geoshapeのクレジットを併記すること。
