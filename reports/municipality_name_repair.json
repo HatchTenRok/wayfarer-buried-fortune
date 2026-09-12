@@ -1,0 +1,18 @@
+{
+  "corrections": {
+    "01220": {
+      "from": "士別市朝日町中央13区",
+      "to": "士別市"
+    },
+    "13213": {
+      "from": "東村",
+      "to": "東村山市"
+    },
+    "17212": {
+      "from": "野々市市三納18街区",
+      "to": "野々市市"
+    }
+  },
+  "changed_search_records": 1,
+  "changed_feature_properties": 1774
+}

@@ -1,0 +1,917 @@
+{
+  "changed_files": 31,
+  "changed_features": 181,
+  "missing_source_matches": 0,
+  "source_geometry_counts": {
+    "MultiPolygon": 46,
+    "Polygon": 96,
+    "Point": 39
+  },
+  "unique_display_name_count": 39,
+  "unique_subarea_name_count": 92,
+  "display_names": [
+    {
+      "name": "グリーンランド柄山景観地区",
+      "count": 2
+    },
+    {
+      "name": "テクノプラザ景観地区",
+      "count": 2
+    },
+    {
+      "name": "ニセコアンヌプリ・モイワ山山麓地区景観地区",
+      "count": 2
+    },
+    {
+      "name": "ヒラフ高原景観地区",
+      "count": 14
+    },
+    {
+      "name": "一之江境川親水公園沿線景観地区",
+      "count": 4
+    },
+    {
+      "name": "倉敷市美観地区",
+      "count": 2
+    },
+    {
+      "name": "北鎌倉景観地区",
+      "count": 4
+    },
+    {
+      "name": "古川親水公園沿線景観地区",
+      "count": 7
+    },
+    {
+      "name": "塩見縄手地区",
+      "count": 2
+    },
+    {
+      "name": "大分城址公園周辺地区景観地区",
+      "count": 6
+    },
+    {
+      "name": "大慈寺地区景観地区",
+      "count": 6
+    },
+    {
+      "name": "定禅寺通景観地区",
+      "count": 4
+    },
+    {
+      "name": "宮城野通景観地区",
+      "count": 7
+    },
+    {
+      "name": "小辺路周辺準景観地区",
+      "count": 2
+    },
+    {
+      "name": "尾道市景観地区",
+      "count": 7
+    },
+    {
+      "name": "山ろく型美観地区",
+      "count": 2
+    },
+    {
+      "name": "山並み背景型美観地区",
+      "count": 2
+    },
+    {
+      "name": "岸辺型美観地区",
+      "count": 4
+    },
+    {
+      "name": "川平地域景観地区",
+      "count": 5
+    },
+    {
+      "name": "市街地型美観形成地区",
+      "count": 2
+    },
+    {
+      "name": "平泉景観地区",
+      "count": 4
+    },
+    {
+      "name": "平泉町準景観地区",
+      "count": 4
+    },
+    {
+      "name": "旧市街地型美観地区",
+      "count": 2
+    },
+    {
+      "name": "歴史遺産型美観地区",
+      "count": 16
+    },
+    {
+      "name": "江の島景観地区",
+      "count": 6
+    },
+    {
+      "name": "沼津市アーケード街美観地区",
+      "count": 2
+    },
+    {
+      "name": "沿道型美観地区",
+      "count": 4
+    },
+    {
+      "name": "沿道型美観形成地区",
+      "count": 4
+    },
+    {
+      "name": "湘南C-X(シークロス)景観地区",
+      "count": 8
+    },
+    {
+      "name": "熱海市東海岸町景観地区",
+      "count": 6
+    },
+    {
+      "name": "獅子森景観地区",
+      "count": 4
+    },
+    {
+      "name": "町石道周辺準景観地区",
+      "count": 2
+    },
+    {
+      "name": "芦屋川特別景観地区",
+      "count": 8
+    },
+    {
+      "name": "芦屋景観地区",
+      "count": 2
+    },
+    {
+      "name": "西大分港周辺地区景観地区",
+      "count": 8
+    },
+    {
+      "name": "観音堂地区景観計画",
+      "count": 2
+    },
+    {
+      "name": "鎌倉景観地区",
+      "count": 9
+    },
+    {
+      "name": "長目の浜準景観地区",
+      "count": 2
+    },
+    {
+      "name": "高野山景観地区",
+      "count": 2
+    }
+  ],
+  "subarea_names": [
+    {
+      "name": "Aゾーン",
+      "count": 1
+    },
+    {
+      "name": "A区域",
+      "count": 1
+    },
+    {
+      "name": "A地区",
+      "count": 3
+    },
+    {
+      "name": "A地区（い）",
+      "count": 1
+    },
+    {
+      "name": "A地区（ろ）",
+      "count": 1
+    },
+    {
+      "name": "A街区",
+      "count": 1
+    },
+    {
+      "name": "Bゾーン",
+      "count": 1
+    },
+    {
+      "name": "B区域",
+      "count": 1
+    },
+    {
+      "name": "B地区",
+      "count": 3
+    },
+    {
+      "name": "B地区（い）",
+      "count": 1
+    },
+    {
+      "name": "B地区（は）",
+      "count": 1
+    },
+    {
+      "name": "B地区（ろ）",
+      "count": 1
+    },
+    {
+      "name": "B街区",
+      "count": 1
+    },
+    {
+      "name": "C-1、2街区",
+      "count": 1
+    },
+    {
+      "name": "C-3、E-4、5、6街区",
+      "count": 1
+    },
+    {
+      "name": "Cゾーン",
+      "count": 1
+    },
+    {
+      "name": "C地区",
+      "count": 3
+    },
+    {
+      "name": "Dゾーン",
+      "count": 1
+    },
+    {
+      "name": "D地区",
+      "count": 2
+    },
+    {
+      "name": "D街区",
+      "count": 1
+    },
+    {
+      "name": "E-1、2、3街区",
+      "count": 1
+    },
+    {
+      "name": "E地区",
+      "count": 1
+    },
+    {
+      "name": "F地区",
+      "count": 1
+    },
+    {
+      "name": "H地区",
+      "count": 1
+    },
+    {
+      "name": "センタービレッジ地区",
+      "count": 1
+    },
+    {
+      "name": "ノースヒルズ地区",
+      "count": 1
+    },
+    {
+      "name": "ペンションビレッジ地区",
+      "count": 1
+    },
+    {
+      "name": "一般地区",
+      "count": 2
+    },
+    {
+      "name": "一般景観地区",
+      "count": 1
+    },
+    {
+      "name": "三条通地区",
+      "count": 1
+    },
+    {
+      "name": "三条通界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "上京北野界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "上京小川歴史的景観保全修景地区",
+      "count": 1
+    },
+    {
+      "name": "上賀茂郷界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "伏見南浜界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "住商複合地",
+      "count": 2
+    },
+    {
+      "name": "住居街区",
+      "count": 1
+    },
+    {
+      "name": "千両ヶ辻界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "双子山地区",
+      "count": 1
+    },
+    {
+      "name": "向島地区",
+      "count": 1
+    },
+    {
+      "name": "城址界わい都市型居住ゾーン",
+      "count": 1
+    },
+    {
+      "name": "大沢川沿い地区",
+      "count": 1
+    },
+    {
+      "name": "官公庁業務ゾーン",
+      "count": 1
+    },
+    {
+      "name": "尾道地区（中心市街地ゾーン）",
+      "count": 1
+    },
+    {
+      "name": "尾道地区（斜面市街地ゾーン）",
+      "count": 1
+    },
+    {
+      "name": "尾道地区（沿道市街地ゾーン）",
+      "count": 1
+    },
+    {
+      "name": "尾道地区（海辺市街地ゾーン）",
+      "count": 1
+    },
+    {
+      "name": "居住ゾーン",
+      "count": 1
+    },
+    {
+      "name": "山原地区",
+      "count": 1
+    },
+    {
+      "name": "山地区",
+      "count": 1
+    },
+    {
+      "name": "山田Ⅰ地区",
+      "count": 1
+    },
+    {
+      "name": "山田Ⅱ地区",
+      "count": 1
+    },
+    {
+      "name": "川平Ⅰ地区",
+      "count": 1
+    },
+    {
+      "name": "川平Ⅱ地区",
+      "count": 1
+    },
+    {
+      "name": "幹線地区",
+      "count": 1
+    },
+    {
+      "name": "旧市街地の住宅地",
+      "count": 1
+    },
+    {
+      "name": "景観街区A",
+      "count": 1
+    },
+    {
+      "name": "景観街区B",
+      "count": 1
+    },
+    {
+      "name": "景観街区C",
+      "count": 1
+    },
+    {
+      "name": "景観街区D",
+      "count": 1
+    },
+    {
+      "name": "景観街区E",
+      "count": 1
+    },
+    {
+      "name": "本願寺・東寺界わい景観整備地区",
+      "count": 1
+    },
+    {
+      "name": "東岩尾別地区",
+      "count": 1
+    },
+    {
+      "name": "東町地区",
+      "count": 1
+    },
+    {
+      "name": "樺山地区",
+      "count": 1
+    },
+    {
+      "name": "歴史景観地区",
+      "count": 2
+    },
+    {
+      "name": "歴史的町並み地区",
+      "count": 1
+    },
+    {
+      "name": "沿道住宅地",
+      "count": 1
+    },
+    {
+      "name": "海浜住商複合地",
+      "count": 1
+    },
+    {
+      "name": "環境保護ゾーン",
+      "count": 1
+    },
+    {
+      "name": "町屋ゾーン",
+      "count": 1
+    },
+    {
+      "name": "祇園町南歴史的景観保全修景地区（八坂通地区）",
+      "count": 1
+    },
+    {
+      "name": "祇園町南歴史的景観保全修景地区（宮川町地区）",
+      "count": 1
+    },
+    {
+      "name": "祇園町南歴史的景観保全修景地区（祇園町南側地区）",
+      "count": 1
+    },
+    {
+      "name": "祇園縄手・新門前歴史的景観保全修景地区",
+      "count": 1
+    },
+    {
+      "name": "羊蹄の里地区",
+      "count": 1
+    },
+    {
+      "name": "臨港地区",
+      "count": 1
+    },
+    {
+      "name": "花園ビレッジ地区",
+      "count": 1
+    },
+    {
+      "name": "若宮大路周辺商業地",
+      "count": 1
+    },
+    {
+      "name": "衣掛けの道地区",
+      "count": 1
+    },
+    {
+      "name": "複合街区",
+      "count": 1
+    },
+    {
+      "name": "西京樫原界わい景観整備地区（街道北・南地区）",
+      "count": 1
+    },
+    {
+      "name": "西京樫原界わい景観整備地区（街道沿い地区）",
+      "count": 1
+    },
+    {
+      "name": "西岩尾別・旭・花園地区",
+      "count": 1
+    },
+    {
+      "name": "西町地区",
+      "count": 1
+    },
+    {
+      "name": "観光型住商複合地",
+      "count": 2
+    },
+    {
+      "name": "谷戸の住宅地",
+      "count": 1
+    },
+    {
+      "name": "賑わいゾーン",
+      "count": 1
+    },
+    {
+      "name": "都心景観形成業務ゾーンその1",
+      "count": 1
+    },
+    {
+      "name": "都心景観形成業務ゾーンその2",
+      "count": 1
+    },
+    {
+      "name": "都心部幹線地区",
+      "count": 1
+    },
+    {
+      "name": "風土景観地区",
+      "count": 1
+    }
+  ],
+  "examples": [
+    {
+      "municipality_code": "01395",
+      "city": "ニセコ町",
+      "before": {
+        "name": "ニセコアンヌプリ・モイワ山山麓地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ニセコアンヌプリ・モイワ山山麓地区景観地区",
+        "address": null,
+        "subarea_name": null,
+        "source_kind": "A35e"
+      },
+      "geometry_type": "Point"
+    },
+    {
+      "municipality_code": "01395",
+      "city": "ニセコ町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "樺山地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01395",
+      "city": "ニセコ町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": null,
+        "source_kind": "A35e"
+      },
+      "geometry_type": "Point"
+    },
+    {
+      "municipality_code": "01395",
+      "city": "ニセコ町",
+      "before": {
+        "name": "ニセコアンヌプリ・モイワ山山麓地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ニセコアンヌプリ・モイワ山山麓地区景観地区",
+        "address": null,
+        "subarea_name": null,
+        "source_kind": "A35d"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "山田Ⅱ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "双子山地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "センタービレッジ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "大沢川沿い地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": null,
+        "source_kind": "A35d"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "山田Ⅰ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "花園ビレッジ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "ペンションビレッジ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "西岩尾別・旭・花園地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "東岩尾別地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "ノースヒルズ地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "01400",
+      "city": "倶知安町",
+      "before": {
+        "name": "ヒラフ高原景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "ヒラフ高原景観地区",
+        "address": null,
+        "subarea_name": "羊蹄の里地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": "盛岡市南大通二丁目、南大通三丁目、大慈寺町、鉈屋町、神子田町及び茶畑二丁目地内"
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": "盛岡市南大通二丁目、南大通三丁目、大慈寺町、鉈屋町、神子田町及び茶畑二丁目地内",
+        "subarea_name": null,
+        "source_kind": "A35e"
+      },
+      "geometry_type": "Point"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": null,
+        "subarea_name": "町屋ゾーン",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": "盛岡市南大通二丁目、南大通三丁目、大慈寺町、鉈屋町、神子田町及び茶畑二丁目地内"
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": "盛岡市南大通二丁目、南大通三丁目、大慈寺町、鉈屋町、神子田町及び茶畑二丁目地内",
+        "subarea_name": null,
+        "source_kind": "A35d"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": null,
+        "subarea_name": "居住ゾーン",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": null,
+        "subarea_name": "環境保護ゾーン",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "03201",
+      "city": "盛岡市",
+      "before": {
+        "name": "大慈寺地区景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "大慈寺地区景観地区",
+        "address": null,
+        "subarea_name": "賑わいゾーン",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "03402",
+      "city": "平泉町",
+      "before": {
+        "name": "平泉町準景観地区",
+        "address": "西磐井郡平泉町平泉字南郷の一部、上窟の一部、北沢の一部、窟の一部、滝ノ上の一部、髢石の一部、西風の一部、山岸の一部、北沖、南沖、東沖、金堀沢の一部、熊ノ前の一部(以下詳細 別記 A35d-14_03_link.csv)"
+      },
+      "after": {
+        "name": "平泉町準景観地区",
+        "address": "西磐井郡平泉町平泉字南郷の一部、上窟の一部、北沢の一部、窟の一部、滝ノ上の一部、髢石の一部、西風の一部、山岸の一部、北沖、南沖、東沖、金堀沢の一部、熊ノ前の一部(以下詳細 別記 A35d-14_03_link.csv)",
+        "subarea_name": null,
+        "source_kind": "A35d"
+      },
+      "geometry_type": "MultiPolygon"
+    },
+    {
+      "municipality_code": "03402",
+      "city": "平泉町",
+      "before": {
+        "name": "平泉景観地区",
+        "address": null
+      },
+      "after": {
+        "name": "平泉景観地区",
+        "address": null,
+        "subarea_name": "一般景観地区",
+        "source_kind": "A35f"
+      },
+      "geometry_type": "Polygon"
+    },
+    {
+      "municipality_code": "03402",
+      "city": "平泉町",
+      "before": {
+        "name": "平泉町準景観地区",
+        "address": "西磐井郡平泉町平泉字南郷の一部、上窟の一部、北沢の一部、窟の一部、滝ノ上の一部、髢石の一部、西風の一部、山岸の一部、北沖、南沖、東沖、金堀沢の一部、熊ノ前の一部(以下詳細 別記 A35d-14_03_link.csv)"
+      },
+      "after": {
+        "name": "平泉町準景観地区",
+        "address": "西磐井郡平泉町平泉字南郷の一部、上窟の一部、北沢の一部、窟の一部、滝ノ上の一部、髢石の一部、西風の一部、山岸の一部、北沖、南沖、東沖、金堀沢の一部、熊ノ前の一部(以下詳細 別記 A35d-14_03_link.csv)",
+        "subarea_name": null,
+        "source_kind": "A35e"
+      },
+      "geometry_type": "Point"
+    }
+  ]
+}

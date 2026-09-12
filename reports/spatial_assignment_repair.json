@@ -1,0 +1,25 @@
+{
+  "mode": "spatial_and_names",
+  "files_checked": 1896,
+  "files_changed": 1795,
+  "points_removed_outside": 68863,
+  "multipoints_removed_outside": 0,
+  "polygons_removed_outside": 10691,
+  "polygons_clipped_to_boundary": 7464,
+  "scenic_names_repaired": 13128,
+  "scenic_source_unmatched": 114,
+  "source_geometries": 19620,
+  "removed_by_layer": {
+    "cafe_restaurant": 33982,
+    "cultural_facilities": 12028,
+    "parks_playgrounds": 18285,
+    "tourism_resources": 4416,
+    "scenic_nature_areas": 10623,
+    "public_facilities": 64,
+    "traditional_building_preservation_areas": 21,
+    "landscape_districts": 26,
+    "landscape_important_buildings_trees": 78,
+    "historic_landscape_areas": 20,
+    "historical_scenic_priority_areas": 11
+  }
+}

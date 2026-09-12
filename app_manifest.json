@@ -1,0 +1,39 @@
+{
+  "package": "wayfarer-github-pages-ready",
+  "generated_at": "2026-09-03T18:39:02",
+  "root": "C:\\WayfarerData\\wayfarer-data\\_github-pages-ready",
+  "app_join_key": "municipality_code",
+  "display_comment_field": "display_comment",
+  "base_map": {
+    "name": "国土地理院 淡色地図",
+    "tile_url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+    "attribution": "地理院タイル",
+    "attribution_url": "https://maps.gsi.go.jp/development/ichiran.html"
+  },
+  "entrypoints": {
+    "municipalities": "data/municipalities.json",
+    "by_municipality": "data/by_municipality/{municipality_code}.geojson",
+    "municipality_boundary": "data/boundaries/{municipality_code}.geojson",
+    "municipality_layer_counts": "indexes/municipality_layer_counts.json",
+    "attribution": "attribution/"
+  },
+  "layer_labels": {
+    "cafe_restaurant": "飲食店",
+    "public_facilities": "公共施設",
+    "scenic_nature_areas": "景観・自然エリア",
+    "historic_landscape_areas": "歴史的風土保存区域",
+    "historical_scenic_priority_areas": "歴史的風致重点地区",
+    "traditional_building_preservation_areas": "伝統的建造物群保存地区",
+    "parks_playgrounds": "公園・遊具",
+    "cultural_facilities": "文化施設",
+    "tourism_resources": "観光資源",
+    "landscape_districts": "景観地区",
+    "landscape_important_buildings_trees": "景観重要建造物・樹木"
+  },
+  "runtime_notes": [
+    "Load data/municipalities.json for search suggestions.",
+    "After the user selects a municipality, load only data/by_municipality/{municipality_code}.geojson.",
+    "Do not load the old nationwide layer GeoJSON files in the GitHub Pages app.",
+    "Animate at most 200 pins; use total_features and layer_counts for the full result count."
+  ]
+}

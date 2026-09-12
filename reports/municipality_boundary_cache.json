@@ -1,0 +1,9 @@
+{
+  "source": "https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/municipalityboundaries2020/FeatureServer/0/query",
+  "source_attribution": "(c) Esri Japan",
+  "source_description": "ESRIジャパン株式会社の全国市区町村界データ（2020年版）。国土地理院の数値地図（国土基本情報）を加工・編集。",
+  "municipality_files": 1903,
+  "source_features": 1907,
+  "geometry_precision": 6,
+  "max_allowable_offset_degrees": 5e-05
+}
