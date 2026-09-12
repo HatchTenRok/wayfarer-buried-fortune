@@ -1,0 +1,350 @@
+{
+  "changed_files": 1294,
+  "changed_features": 10941,
+  "missing_source_matches": 0,
+  "source_geometry_counts": {
+    "Point": 10941
+  },
+  "examples": [
+    {
+      "municipality_code": "01101",
+      "city": "札幌市中央区",
+      "before": {
+        "name": "âR",
+        "address": "RniñÎR«jiÏ / ñÎR«Êô"
+      },
+      "after": {
+        "name": "藻岩山",
+        "address": "山地（非火山性）景観 / 非火山性弧峰",
+        "resource_code": "205"
+      },
+      "coordinates": [
+        141.32212829589844,
+        43.02222442626953
+      ]
+    },
+    {
+      "municipality_code": "01102",
+      "city": "札幌市北区",
+      "before": {
+        "name": "yPbgÀ",
+        "address": "ÎÀiÏ / ÎÀ"
+      },
+      "after": {
+        "name": "ペケレット沼",
+        "address": "湖沼景観 / 湖沼",
+        "resource_code": "701"
+      },
+      "coordinates": [
+        141.37815856933594,
+        43.16840744018555
+      ]
+    },
+    {
+      "municipality_code": "01102",
+      "city": "札幌市北区",
+      "before": {
+        "name": "gtR»u",
+        "address": "CÝiÏ / »u"
+      },
+      "after": {
+        "name": "紅葉山砂丘",
+        "address": "海岸景観 / 砂丘",
+        "resource_code": "811"
+      },
+      "coordinates": [
+        141.31658935546875,
+        43.151206970214844
+      ]
+    },
+    {
+      "municipality_code": "01103",
+      "city": "札幌市東区",
+      "before": {
+        "name": "GÀ",
+        "address": "ÎÀiÏ / ÎÀ"
+      },
+      "after": {
+        "name": "モエレ沼",
+        "address": "湖沼景観 / 湖沼",
+        "resource_code": "701"
+      },
+      "coordinates": [
+        141.43490600585938,
+        43.12835693359375
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "xâJf",
+        "address": "ÎRiÏ / ÎûEJf"
+      },
+      "after": {
+        "name": "支笏カルデラ",
+        "address": "火山景観 / 火口・カルデラ",
+        "resource_code": "104"
+      },
+      "coordinates": [
+        141.26060485839844,
+        42.75956726074219
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "bëx",
+        "address": "ÎRiÏ / ÎûEJf"
+      },
+      "after": {
+        "name": "恵庭岳",
+        "address": "火山景観 / 火口・カルデラ",
+        "resource_code": "104"
+      },
+      "coordinates": [
+        141.28311157226562,
+        42.79228591918945
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "x",
+        "address": "ÎRiÏ / ÎR"
+      },
+      "after": {
+        "name": "漁岳",
+        "address": "火山景観 / 火山",
+        "resource_code": "102"
+      },
+      "coordinates": [
+        141.23550415039062,
+        42.82112503051758
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "óÀ",
+        "address": "ÎRiÏ / ÎRQ"
+      },
+      "after": {
+        "name": "空沼",
+        "address": "火山景観 / 火山群",
+        "resource_code": "101"
+      },
+      "coordinates": [
+        141.25198364257812,
+        42.866207122802734
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "xâÎ",
+        "address": "ÎÀiÏ / ÎÀ"
+      },
+      "after": {
+        "name": "支笏湖",
+        "address": "湖沼景観 / 湖沼",
+        "resource_code": "701"
+      },
+      "coordinates": [
+        141.32418823242188,
+        42.755916595458984
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "óÀ",
+        "address": "ÎÀiÏ / ÎÀ"
+      },
+      "after": {
+        "name": "空沼",
+        "address": "湖沼景観 / 湖沼",
+        "resource_code": "701"
+      },
+      "coordinates": [
+        141.26010131835938,
+        42.857479095458984
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "Dy",
+        "address": "ÎRiÏ / ÎRQ"
+      },
+      "after": {
+        "name": "札幌",
+        "address": "火山景観 / 火山群",
+        "resource_code": "101"
+      },
+      "coordinates": [
+        141.19813537597656,
+        42.89921951293945
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "óÀxRÅ",
+        "address": "ÎRiÏ / ÎR Á¥IÈÅü"
+      },
+      "after": {
+        "name": "空沼岳山稜部",
+        "address": "火山景観 / 火山 特徴的な稜線",
+        "resource_code": "107"
+      },
+      "coordinates": [
+        141.25636291503906,
+        42.85270690917969
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "L½ìE\\Üötß",
+        "address": "ÍìiÏ / ¬JEkJ"
+      },
+      "after": {
+        "name": "豊平川・十五島公園付近",
+        "address": "河川景観 / 峡谷・渓谷",
+        "resource_code": "601"
+      },
+      "coordinates": [
+        141.301513671875,
+        42.966468811035156
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "x",
+        "address": "ÎRiÏ / ÎRQ"
+      },
+      "after": {
+        "name": "漁岳",
+        "address": "火山景観 / 火山群",
+        "resource_code": "101"
+      },
+      "coordinates": [
+        141.23348999023438,
+        42.822410583496094
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "èRk·ò",
+        "address": "ÎRiÏ / ¬ò"
+      },
+      "after": {
+        "name": "定山渓温泉",
+        "address": "火山景観 / 噴泉",
+        "resource_code": "111"
+      },
+      "coordinates": [
+        141.166259765625,
+        42.96764373779297
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "èRk",
+        "address": "RniñÎR«jiÏ / Rn âôEâ"
+      },
+      "after": {
+        "name": "定山渓",
+        "address": "山地（非火山性）景観 / 山地 岩峰・岩柱",
+        "resource_code": "215"
+      },
+      "coordinates": [
+        141.1617431640625,
+        42.96263885498047
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "Ï¹âRRÅ",
+        "address": "¤i ÁênwiÏ / ¤i â¬"
+      },
+      "after": {
+        "name": "観音岩山山稜部",
+        "address": "陸景 特殊地学景観 / 陸景 岩脈",
+        "resource_code": "402"
+      },
+      "coordinates": [
+        141.23947143554688,
+        42.96730041503906
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "L½ìèRktß",
+        "address": "ÍìiÏ / ¬JEkJ"
+      },
+      "after": {
+        "name": "豊平川定山渓付近",
+        "address": "河川景観 / 峡谷・渓谷",
+        "resource_code": "601"
+      },
+      "coordinates": [
+        141.19151306152344,
+        42.96662139892578
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "àRò",
+        "address": "ÍìiÏ / ¬JEkJ"
+      },
+      "after": {
+        "name": "金山沢",
+        "address": "河川景観 / 峡谷・渓谷",
+        "resource_code": "601"
+      },
+      "coordinates": [
+        141.3092803955078,
+        42.84470748901367
+      ]
+    },
+    {
+      "municipality_code": "01106",
+      "city": "札幌市南区",
+      "before": {
+        "name": "IR^yÎ",
+        "address": "ÎÀiÏ / ÎÀ"
+      },
+      "after": {
+        "name": "オコタンペ湖",
+        "address": "湖沼景観 / 湖沼",
+        "resource_code": "701"
+      },
+      "coordinates": [
+        141.25718688964844,
+        42.800472259521484
+      ]
+    }
+  ]
+}

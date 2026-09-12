@@ -1,0 +1,13 @@
+{
+  "mode": "names_only",
+  "files_checked": 1896,
+  "files_changed": 126,
+  "points_removed_outside": 0,
+  "multipoints_removed_outside": 0,
+  "polygons_removed_outside": 0,
+  "polygons_clipped_to_boundary": 0,
+  "scenic_names_repaired": 1505,
+  "scenic_source_unmatched": 94,
+  "source_geometries": 19620,
+  "removed_by_layer": {}
+}

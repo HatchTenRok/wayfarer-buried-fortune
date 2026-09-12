@@ -1,0 +1,58 @@
+{
+  "removed_total": 5,
+  "municipalities": {
+    "26201": {
+      "pref": "京都府",
+      "city": "福知山市",
+      "reason": "福知山市の飲食店データに、住所と大きく離れた座標が混在していたため除外",
+      "removed_count": 5,
+      "removed": [
+        {
+          "name": "足立音衛門　里山ファクトリー（北棟 店舗）",
+          "address": "京都府福知山市大字私市小字上り立1番",
+          "layer_id": "cafe_restaurant",
+          "coordinates": [
+            135.81522,
+            34.822621
+          ]
+        },
+        {
+          "name": "久乃家",
+          "address": "京都府福知山市北本町一区97-3",
+          "layer_id": "cafe_restaurant",
+          "coordinates": [
+            135.770019,
+            34.994894
+          ]
+        },
+        {
+          "name": "レスト&カフェ　ポコァポコ",
+          "address": "京都府福知山市字池田小字角ノ下185-1",
+          "layer_id": "cafe_restaurant",
+          "coordinates": [
+            135.742372,
+            35.0586
+          ]
+        },
+        {
+          "name": "来來来",
+          "address": "京都府福知山市字天田小字村中一一五-五",
+          "layer_id": "cafe_restaurant",
+          "coordinates": [
+            135.855432,
+            34.841682
+          ]
+        },
+        {
+          "name": "つむぎカフェ",
+          "address": "京都府福知山市字荒河小字狭間４番地の３ ＮＰＯマーケット荒河店１Ｆ",
+          "layer_id": "cafe_restaurant",
+          "coordinates": [
+            135.892977,
+            34.800041
+          ]
+        }
+      ]
+    }
+  }
+}
