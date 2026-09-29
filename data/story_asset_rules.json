@@ -1,0 +1,192 @@
+{
+  "version": "20260914-category-1",
+  "source": "ポケストップ候補カテゴリ.xlsx",
+  "rules": [
+    {
+      "id": "busho",
+      "src": "04_busho_fullbody_v3.webp",
+      "alt": "武将",
+      "keywords": [
+        "武将",
+        "武士",
+        "武人",
+        "大名",
+        "城主",
+        "殿様"
+      ],
+      "priority": 99
+    },
+    {
+      "id": "bunkajin",
+      "src": "06_bunkajin_v2.webp",
+      "alt": "名士",
+      "keywords": [
+        "名士",
+        "文化人",
+        "郷土の有名人"
+      ],
+      "priority": 98
+    },
+    {
+      "id": "kuge",
+      "src": "07_kuge.webp",
+      "alt": "公家",
+      "keywords": [
+        "公家",
+        "平安の歌人",
+        "貴族"
+      ],
+      "priority": 97
+    },
+    {
+      "id": "shiro",
+      "src": "09_shiro.webp",
+      "alt": "城",
+      "keywords": [
+        "城",
+        "古城",
+        "名城"
+      ],
+      "priority": 96
+    },
+    {
+      "id": "shiroato",
+      "src": "11_shiroato_v2.webp",
+      "alt": "城跡",
+      "keywords": [
+        "城跡"
+      ],
+      "priority": 95
+    },
+    {
+      "id": "jinya",
+      "src": "14_jinya.webp",
+      "alt": "陣屋",
+      "keywords": [
+        "陣屋",
+        "本陣",
+        "江戸時代の宿泊施設"
+      ],
+      "priority": 94
+    },
+    {
+      "id": "jiin",
+      "src": "15_jiin.webp",
+      "alt": "寺",
+      "keywords": [
+        "寺",
+        "寺院",
+        "仏教施設"
+      ],
+      "priority": 93
+    },
+    {
+      "id": "jinja",
+      "src": "17_jinja_torii_haiden.webp",
+      "alt": "神社",
+      "keywords": [
+        "神社",
+        "鳥居"
+      ],
+      "priority": 92
+    },
+    {
+      "id": "kyokai",
+      "src": "18_kyokai.webp",
+      "alt": "教会",
+      "keywords": [
+        "教会"
+      ],
+      "priority": 91
+    },
+    {
+      "id": "kofun",
+      "src": "19_kofun.webp",
+      "alt": "古墳",
+      "keywords": [
+        "古墳",
+        "墳墓"
+      ],
+      "priority": 90
+    },
+    {
+      "id": "kominka",
+      "src": "20_kominka.webp",
+      "alt": "古民家",
+      "keywords": [
+        "古民家",
+        "歴史指定住宅"
+      ],
+      "priority": 89
+    },
+    {
+      "id": "rekishi-chosha",
+      "src": "21_rekishi_chosha.webp",
+      "alt": "歴史的庁舎",
+      "keywords": [
+        "歴史的庁舎"
+      ],
+      "priority": 88
+    },
+    {
+      "id": "hakubutsukan",
+      "src": "24_hakubutsukan_v3.webp",
+      "alt": "博物館",
+      "keywords": [
+        "博物館"
+      ],
+      "priority": 87
+    },
+    {
+      "id": "sekihi",
+      "src": "25_sekihi.webp",
+      "alt": "石碑",
+      "keywords": [
+        "石碑",
+        "碑",
+        "歌碑",
+        "歴史説明板"
+      ],
+      "priority": 86
+    },
+    {
+      "id": "todai",
+      "src": "28_todai.webp",
+      "alt": "灯台",
+      "keywords": [
+        "灯台"
+      ],
+      "priority": 85
+    },
+    {
+      "id": "kyu-ekisha",
+      "src": "29_kyu_ekisha.webp",
+      "alt": "旧駅舎",
+      "keywords": [
+        "旧駅舎",
+        "廃駅"
+      ],
+      "priority": 84
+    },
+    {
+      "id": "keisho",
+      "src": "30_keisho.webp",
+      "alt": "景勝",
+      "keywords": [
+        "景勝",
+        "観光地"
+      ],
+      "priority": 83
+    },
+    {
+      "id": "teien",
+      "src": "31_teien.webp",
+      "alt": "庭園",
+      "keywords": [
+        "庭園",
+        "国立公園"
+      ],
+      "priority": 82
+    }
+  ]
+}
