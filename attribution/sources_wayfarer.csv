@@ -1,0 +1,25 @@
+﻿source,dataset_id,name,official_url,license,publish_policy,retrieved_or_checked_at
+国土交通省 国土数値情報,P05,市町村役場等及び公的集会施設,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05-2022.html,CC_BY_4.0,publish,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P27,文化施設,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P02,公共施設,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P02-2006.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P33,集客施設,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P35,道の駅,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P35.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P13,都市公園,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P13.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,P19,地域資源,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P19.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A10,自然公園地域,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html,CC_BY_4.0（一部地域は非商用）,mixed_okayama_restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A11,自然保全地域,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A11.html,CC_BY_4.0（一部地域は非商用）,mixed_okayama_restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A35a,景観計画区域,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A35a.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A35b,景観地区・準景観地区,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A35b.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A35c,景観重要建造物・樹木,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A35c.html,非商用・再配布要確認,restricted,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A43,伝統的建造物群保存地区,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A43.html,CC_BY_4.0,publish,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A44,歴史的風致維持向上計画の重点地区,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A44.html,CC_BY_4.0,publish,2026-09-01T04:59:07+00:00
+国土交通省 国土数値情報,A42,歴史的風土保存区域,https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A42.html,CC_BY_4.0,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_101,登録有形文化財（建造物）,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=101,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_102,国宝・重要文化財（建造物）,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=102,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_301,重要有形民俗文化財,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=301,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_311,登録有形民俗文化財,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=311,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_401,史跡名勝天然記念物,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=401,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_411,登録記念物,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=411,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_412,重要文化的景観,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=412,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_103,重要伝統的建造物群保存地区,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=103,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00
+文化庁 国指定文化財等データベース,culture_901,世界遺産,https://kunishitei.bunka.go.jp/bsys/categorylist?register_id=901,文字情報は出典表示の上で利用,publish,2026-09-01T04:59:07+00:00

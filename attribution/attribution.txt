@@ -1,0 +1,18 @@
+出典・加工表示
+============
+
+国土数値情報を使用した項目：
+- 国土数値情報（市町村役場等及び公的集会施設）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05-2022.html）を加工して作成
+- 国土数値情報（自然公園地域）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A10-2015.html）を加工して作成
+- 国土数値情報（自然保全地域）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A11.html）を加工して作成
+- 国土数値情報（伝統的建造物群保存地区）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A43.html）を加工して作成
+- 国土数値情報（歴史的風致維持向上計画の重点地区）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A44.html）を加工して作成
+- 国土数値情報（歴史的風土保存区域）（国土交通省）（https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A42.html）を加工して作成
+
+文化庁データを使用した項目：
+- 文化庁「国指定文化財等データベース」の文字情報を出典表示の上で加工して作成
+- 利用規約：https://kunishitei.bunka.go.jp/top/policy
+
+出典：Japan Food Facilities（各自治体・厚生労働省が公開する食品営業許可オープンデータを加工して作成）
+元データの出典・ライセンス一覧： https://gl20percentclub.github.io/japan-food-facilities/attribution.html
+緯度経度はJapan Food Facilitiesが住所からジオコーディングして独自に付与した参考情報を含みます。
