@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "municipalities": 1896,
+  "history_features": 94484,
+  "base_features": 626230,
+  "base_layer_counts": {
+    "cafe_restaurant": 443731,
+    "cultural_facilities": 23664,
+    "historic_landscape_areas": 91,
+    "historical_scenic_priority_areas": 93,
+    "landscape_districts": 155,
+    "landscape_important_buildings_trees": 470,
+    "parks_playgrounds": 66537,
+    "public_facilities": 75475,
+    "scenic_nature_areas": 9386,
+    "tourism_resources": 6523,
+    "traditional_building_preservation_areas": 105
+  },
+  "roadside_stations": 1145,
+  "industrial_landmark_names": 473,
+  "layer_counts": {
+    "bakumatsu_villages": 59808,
+    "civil_engineering_heritage": 569,
+    "edo_post_stations": 1568,
+    "edo_roads": 895,
+    "historical_sites_archaeology": 14836,
+    "historical_temples_shrines": 16808
+  },
+  "geometry_counts": {
+    "LineString": 895,
+    "MultiPoint": 39,
+    "MultiPolygon": 24349,
+    "Point": 33742,
+    "Polygon": 35459
+  },
+  "largest_history_files": [
+    {
+      "file": "15222.geojson",
+      "bytes": 621341,
+      "features": 732
+    },
+    {
+      "file": "16201.geojson",
+      "bytes": 589591,
+      "features": 546
+    },
+    {
+      "file": "20201.geojson",
+      "bytes": 510782,
+      "features": 410
+    },
+    {
+      "file": "15202.geojson",
+      "bytes": 474188,
+      "features": 526
+    },
+    {
+      "file": "23211.geojson",
+      "bytes": 409756,
+      "features": 427
+    },
+    {
+      "file": "42209.geojson",
+      "bytes": 399629,
+      "features": 241
+    },
+    {
+      "file": "37201.geojson",
+      "bytes": 391124,
+      "features": 201
+    },
+    {
+      "file": "18201.geojson",
+      "bytes": 389019,
+      "features": 556
+    },
+    {
+      "file": "31201.geojson",
+      "bytes": 370790,
+      "features": 486
+    },
+    {
+      "file": "06203.geojson",
+      "bytes": 344608,
+      "features": 320
+    }
+  ],
+  "warnings": [
+    "sources excluded because no valid current-municipality location was available: {'01_temples.geojson': 3, '02_shrines.geojson': 6, '05_castle_ruins.geojson': 2, '07_mounds.geojson': 1, '08_archaeological_sites.geojson': 5, '09_historic_sites.geojson': 2, 'civil_heritage_jsce_complete.geojson': 23, 'edo_post_stations_v1.geojson': 1}"
+  ],
+  "errors": []
+}
