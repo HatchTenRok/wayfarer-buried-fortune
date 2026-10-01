@@ -1,5 +1,5 @@
 const DATA_ROOT = "./data";
-const APP_VERSION = "20260929-ver3-semifinal-popup-tabs-1";
+const APP_VERSION = "20261002-ver3-semifinal-manual-1";
 const MAX_DROP_PINS = 200;
 const MAX_RENDERED_POINT_FEATURES = 3500;
 const MIN_RENDERED_POINTS_PER_LAYER = 25;
