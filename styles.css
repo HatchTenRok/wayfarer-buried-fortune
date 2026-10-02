@@ -43,6 +43,17 @@ a {
   color: var(--accent-strong);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .maplibregl-popup-content {
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -293,6 +304,146 @@ dialog {
 
 dialog::backdrop {
   background: rgba(15, 23, 42, 0.34);
+}
+
+.manual-dialog {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  overflow: hidden;
+}
+
+.manual-dialog::backdrop {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(15, 159, 143, 0.18), transparent 34%),
+    rgba(7, 12, 25, 0.78);
+}
+
+.manual-shell {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  overflow: hidden;
+  background: #07101f;
+}
+
+.manual-viewport {
+  display: grid;
+  min-height: 0;
+  place-items: center;
+  padding: 12px 12px 0;
+}
+
+.manual-image {
+  display: block;
+  max-width: min(100%, 720px);
+  max-height: calc(100vh - 92px);
+  max-height: calc(100dvh - 92px);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  user-select: none;
+}
+
+.manual-close-button,
+.manual-skip-button {
+  position: fixed;
+  z-index: 3;
+  top: max(12px, env(safe-area-inset-top));
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #12315c;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  font-weight: 800;
+}
+
+.manual-close-button {
+  left: max(12px, env(safe-area-inset-left));
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-content: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.manual-skip-button {
+  right: max(12px, env(safe-area-inset-right));
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.manual-skip-button[hidden] {
+  display: none;
+}
+
+.manual-controls {
+  display: grid;
+  grid-template-columns: minmax(76px, 0.8fr) minmax(120px, 1fr) minmax(76px, 0.8fr);
+  align-items: center;
+  gap: 10px;
+  padding: 10px max(12px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(7, 16, 31, 0.82);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.manual-nav-button {
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #12315c;
+  font-weight: 800;
+}
+
+.manual-nav-button.primary {
+  background: linear-gradient(135deg, #ff7a1a, #2563eb);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.manual-nav-button:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.manual-progress {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.manual-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.manual-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.manual-dots span.active {
+  width: 18px;
+  background: #20d5bf;
 }
 
 .result-dialog {
@@ -951,10 +1102,6 @@ dialog::backdrop {
 
 .help-card {
   padding: 22px;
-}
-
-.manual-card {
-  width: min(720px, calc(100vw - 28px));
 }
 
 .help-body {

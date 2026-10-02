@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="preconnect" href="https://cyberjapandata.gsi.go.jp">
     <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=20261002-ver3-semifinal-manual-1">
+    <link rel="stylesheet" href="./styles.css?v=20261002-ver3-semifinal-opening-manual-2">
   </head>
   <body>
     <div id="map" aria-label="日本地図"></div>
@@ -112,36 +112,23 @@
       </form>
     </dialog>
 
-    <dialog class="help-dialog" id="manualDialog" aria-labelledby="manualTitle">
-      <form method="dialog" class="help-card manual-card">
-        <div class="dialog-head">
-          <h2 id="manualTitle">使い方・データの見方</h2>
-          <button class="icon-button" value="close" type="submit" aria-label="閉じる">×</button>
+    <dialog class="manual-dialog" id="manualDialog" aria-labelledby="manualTitle">
+      <section class="manual-shell" role="document">
+        <h2 class="sr-only" id="manualTitle">使い方・データの見方</h2>
+        <button class="manual-close-button" id="manualCloseButton" type="button" aria-label="マニュアルを閉じる">×</button>
+        <button class="manual-skip-button" id="manualSkipButton" type="button">スキップ</button>
+        <div class="manual-viewport">
+          <img class="manual-image" id="manualImage" src="./assets/manual/manual-01.webp" alt="まちスポット占い アプリ操作マニュアル" decoding="async">
         </div>
-        <div class="help-body manual-body">
-          <h3>基本の流れ</h3>
-          <p>「街の名前を入力」から市区町村を選ぶと、その地域の候補地点、境界線、鑑定結果を表示します。地図をクリックするとクリック地点の市区町村を枠で示し、「クリックした街を鑑定」から同じ鑑定へ進めます。</p>
-
-          <h3>鑑定結果</h3>
-          <p>1ページ目は、街の基盤と歴史資産を二つのレーダーチャートで示します。各軸の数字は収録件数、線の長さは全国1,896自治体内での順位を0～100に換算した値です。軸名を押すと結果画面が閉じ、そのカテゴリだけを地図に表示します。地図右側の「復帰」ですべての表示に戻せます。</p>
-          <p>1ページ目の大見出しはWikipedia由来の人物・名所・食文化等を短く総括し、その下に件数ルールにもとづく街歩きの手がかりを表示します。2ページ目は街の鑑定コメント本文を表示します。3ページ目はゆかりの人物、観光・歴史名所、地域・都道府県の食文化、ご当地キャラクターです。「ほか○件をすべて見る」を押すと、選んだカードをパネル全体へ展開できます。</p>
-          <p>鑑定文に出てくる「碑」「城」「寺」「偉人」などの語句や地域内の候補名に応じて、関連する演出画像を表示します。</p>
-
-          <h3>地図の見方</h3>
-          <p>色付きのピンや区域はカテゴリごとの候補です。ピンや区域をクリックすると、名称、カテゴリ、住所、出典を確認できます。左上のカテゴリメニューで表示するカテゴリを切り替えられます。</p>
-          <p>候補数が多い地域では、表示速度を保つため地図上のピンは代表点に絞って表示する場合があります。鑑定結果の件数はデータ全体の集計です。</p>
-
-          <h3>近世村</h3>
-          <p>近世村は2015年農業集落境界をもとに復元した概略データです。本アプリでは「近世村のおおよその範囲」と表示し、江戸時代の正確な村境でない可能性があります。</p>
-
-          <h3>飲食店データ</h3>
-          <p>飲食店は食品営業許可・届出施設の公開データを加工して掲載しています。</p>
-          <p>なお、個人名らしい飲食店名は、地図上では「飲食店候補」として表示します。</p>
-
-          <h3>注意事項</h3>
-          <p>本アプリは公開データを探索用に加工した参考情報です。施設の現在の営業状況、公開状況、位置、名称、指定状況の正確性は保証しません。実際に訪問・利用する場合は、公式情報や現地情報を確認してください。</p>
+        <div class="manual-controls" aria-label="マニュアルのページ送り">
+          <button class="manual-nav-button" id="manualPrevButton" type="button">前へ</button>
+          <div class="manual-progress">
+            <span id="manualPageLabel">1 / 10</span>
+            <div class="manual-dots" id="manualDots" aria-hidden="true"></div>
+          </div>
+          <button class="manual-nav-button primary" id="manualNextButton" type="button">次へ</button>
         </div>
-      </form>
+      </section>
     </dialog>
 
     <dialog class="help-dialog" id="helpDialog" aria-labelledby="helpTitle">
@@ -195,6 +182,6 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="./app.js?v=20261002-ver3-semifinal-manual-1"></script>
+    <script src="./app.js?v=20261002-ver3-semifinal-opening-manual-2"></script>
   </body>
 </html>

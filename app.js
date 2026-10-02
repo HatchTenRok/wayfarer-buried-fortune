@@ -1,5 +1,5 @@
 const DATA_ROOT = "./data";
-const APP_VERSION = "20261002-ver3-semifinal-manual-1";
+const APP_VERSION = "20261002-ver3-semifinal-opening-manual-2";
 const MAX_DROP_PINS = 200;
 const MAX_RENDERED_POINT_FEATURES = 3500;
 const MIN_RENDERED_POINTS_PER_LAYER = 25;
@@ -7,10 +7,25 @@ const BOUNDARY_ROOT = `${DATA_ROOT}/boundaries`;
 const HISTORY_ROOT = `${DATA_ROOT}/history_by_municipality`;
 const PROFILE_ROOT = `${DATA_ROOT}/profiles`;
 const STORY_ASSET_ROOT = "./webp";
+const MANUAL_SEEN_KEY = "machispo_manual_seen";
+const MANUAL_VERSION = "20261002-opening-manual";
 const STORY_RULES_PATH = `${DATA_ROOT}/story_asset_rules.json`;
 const BOUNDARY_INDEX_PATH = `${DATA_ROOT}/boundary_index.json`;
 const BOUNDARY_QUERY_URL =
   "https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/municipalityboundaries2020/FeatureServer/0/query";
+
+const manualPages = [
+  { src: "./assets/manual/manual-01.webp", alt: "まちスポット占い アプリ操作マニュアルの表紙" },
+  { src: "./assets/manual/manual-02.webp", alt: "このアプリでできること" },
+  { src: "./assets/manual/manual-03.webp", alt: "街の名前から探す方法" },
+  { src: "./assets/manual/manual-04.webp", alt: "地図をクリックして探す方法" },
+  { src: "./assets/manual/manual-05.webp", alt: "鑑定結果画面の見方" },
+  { src: "./assets/manual/manual-06.webp", alt: "レーダーチャートの見方" },
+  { src: "./assets/manual/manual-07.webp", alt: "気になるカテゴリだけを見る方法" },
+  { src: "./assets/manual/manual-08.webp", alt: "鑑定コメントと風土・歴史ページの見方" },
+  { src: "./assets/manual/manual-09.webp", alt: "歴史や風土を先に知って歩く楽しみ方" },
+  { src: "./assets/manual/manual-10.webp", alt: "地図の見方と注意" },
+];
 
 const storyIllustrationRules = [
   {
@@ -211,6 +226,8 @@ const state = {
   popup: null,
   selectionRunId: 0,
   resultPage: 0,
+  manualPage: 0,
+  manualCloseMarksSeen: false,
 };
 
 const municipalitySearchAliases = {
@@ -249,6 +266,13 @@ const elements = {
   nextResultPage: document.querySelector("#nextResultPage"),
   manualButton: document.querySelector("#manualButton"),
   manualDialog: document.querySelector("#manualDialog"),
+  manualCloseButton: document.querySelector("#manualCloseButton"),
+  manualSkipButton: document.querySelector("#manualSkipButton"),
+  manualImage: document.querySelector("#manualImage"),
+  manualPrevButton: document.querySelector("#manualPrevButton"),
+  manualNextButton: document.querySelector("#manualNextButton"),
+  manualPageLabel: document.querySelector("#manualPageLabel"),
+  manualDots: document.querySelector("#manualDots"),
   helpButton: document.querySelector("#helpButton"),
   helpDialog: document.querySelector("#helpDialog"),
   toast: document.querySelector("#toast"),
@@ -302,6 +326,7 @@ init();
 async function init() {
   renderCategoryControls();
   wireEvents();
+  maybeShowInitialManual();
   try {
     const response = await fetch(cacheUrl(`${DATA_ROOT}/municipalities.json`));
     if (!response.ok) throw new Error(`municipalities.json ${response.status}`);
@@ -345,7 +370,34 @@ function wireEvents() {
   elements.menuButton.addEventListener("click", () => setMenuOpen(true));
   elements.closeMenuButton.addEventListener("click", () => setMenuOpen(false));
   elements.restoreLayersButton.addEventListener("click", restoreAllLayers);
-  elements.manualButton.addEventListener("click", () => elements.manualDialog.showModal());
+  elements.manualButton.addEventListener("click", () => {
+    setMenuOpen(false);
+    openManual();
+  });
+  elements.manualCloseButton.addEventListener("click", () => closeManual(true));
+  elements.manualSkipButton.addEventListener("click", () => closeManual(true));
+  elements.manualPrevButton.addEventListener("click", () => setManualPage(state.manualPage - 1));
+  elements.manualNextButton.addEventListener("click", () => {
+    if (state.manualPage >= manualPages.length - 1) {
+      closeManual(true);
+      return;
+    }
+    setManualPage(state.manualPage + 1);
+  });
+  elements.manualImage.addEventListener("click", () => {
+    if (state.manualPage < manualPages.length - 1) setManualPage(state.manualPage + 1);
+  });
+  elements.manualDialog.addEventListener("close", () => {
+    if (state.manualCloseMarksSeen) markManualSeen();
+    state.manualCloseMarksSeen = false;
+  });
+  elements.manualDialog.addEventListener("cancel", () => {
+    state.manualCloseMarksSeen = true;
+  });
+  elements.manualDialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") setManualPage(state.manualPage - 1);
+    if (event.key === "ArrowRight") setManualPage(state.manualPage + 1);
+  });
   elements.helpButton.addEventListener("click", () => elements.helpDialog.showModal());
   elements.inspectClickedButton.addEventListener("click", () => {
     if (state.clickedMunicipality) {
@@ -411,6 +463,98 @@ function wireEvents() {
     map.getCanvas().style.cursor = hasOtherGeometry ? "pointer" : "";
   });
 }
+
+function maybeShowInitialManual() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.has("manualReset")) {
+    clearManualSeen();
+  }
+
+  const forceManual = params.has("manual");
+  if (forceManual || getManualSeen() !== MANUAL_VERSION) {
+    openManual({ markSeenOnClose: true });
+  }
+}
+
+function openManual(options = {}) {
+  const { markSeenOnClose = false } = options;
+  state.manualCloseMarksSeen = markSeenOnClose;
+  setManualPage(0);
+  preloadManualImages();
+  if (!elements.manualDialog.open) {
+    elements.manualDialog.showModal();
+  }
+}
+
+function closeManual(markSeen = false) {
+  state.manualCloseMarksSeen = markSeen;
+  if (elements.manualDialog.open) {
+    elements.manualDialog.close();
+    return;
+  }
+  if (markSeen) markManualSeen();
+}
+
+function setManualPage(page) {
+  const nextPage = Math.max(0, Math.min(page, manualPages.length - 1));
+  state.manualPage = nextPage;
+  const manual = manualPages[nextPage];
+  elements.manualImage.src = cacheUrl(manual.src);
+  elements.manualImage.alt = manual.alt;
+  elements.manualPageLabel.textContent = `${nextPage + 1} / ${manualPages.length}`;
+  elements.manualPrevButton.disabled = nextPage === 0;
+  elements.manualNextButton.textContent =
+    nextPage === manualPages.length - 1 ? "アプリを始める" : "次へ";
+  elements.manualSkipButton.hidden = nextPage !== 0;
+  renderManualDots();
+}
+
+function renderManualDots() {
+  elements.manualDots.innerHTML = manualPages
+    .map((_, index) => `<span class="${index === state.manualPage ? "active" : ""}"></span>`)
+    .join("");
+}
+
+function preloadManualImages() {
+  manualPages.slice(1).forEach((manual) => {
+    const image = new Image();
+    image.src = cacheUrl(manual.src);
+  });
+}
+
+function getManualSeen() {
+  try {
+    return localStorage.getItem(MANUAL_SEEN_KEY);
+  } catch (_error) {
+    return "";
+  }
+}
+
+function markManualSeen() {
+  try {
+    localStorage.setItem(MANUAL_SEEN_KEY, MANUAL_VERSION);
+    console.info(`[manual] ${MANUAL_SEEN_KEY}=${MANUAL_VERSION}`);
+  } catch (_error) {
+    // localStorage may be unavailable in private browsing modes.
+  }
+}
+
+function clearManualSeen() {
+  try {
+    localStorage.removeItem(MANUAL_SEEN_KEY);
+    console.info(`[manual] ${MANUAL_SEEN_KEY} cleared`);
+  } catch (_error) {
+    // localStorage may be unavailable in private browsing modes.
+  }
+}
+
+window.wayfarerManualStatus = () => ({
+  key: MANUAL_SEEN_KEY,
+  seen: getManualSeen(),
+  currentVersion: MANUAL_VERSION,
+  page: state.manualPage + 1,
+  totalPages: manualPages.length,
+});
 
 async function handleMapClick(event) {
   const pointFeatures = map.queryRenderedFeatures(event.point, {
